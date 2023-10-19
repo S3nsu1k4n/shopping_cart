@@ -1,19 +1,12 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
+import Router from './Router.jsx'
 
 import './App.css'
 
 const App = () => {
-  const [heading, setHeading] = useState("Magnificent Monkeys");
-
-  const clickHandler = () => {
-    setHeading("Radical Rhinos");
-  }
-
   return (
-    <>
-      <button type='button' onClick={clickHandler}>Click Me</button>
-      <h1>{heading}</h1>
-    </>
+    <Router />
   )
 }
 

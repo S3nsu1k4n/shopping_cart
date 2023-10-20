@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
 
 const Home = () => {
+  // few images or information
+  
   return (
     <>
       <Navbar />

@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
-import Router from './Router.jsx'
-
 import './App.css'
+import RouterComponent from './Router.jsx';
 
 const App = () => {
+  const [items, setItems] = useState({});
   return (
-    <Router />
+    <>
+      <RouterComponent items={items} setItems={setItems} />
+    </>
   )
 }
 

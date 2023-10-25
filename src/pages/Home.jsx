@@ -1,12 +1,10 @@
-import Navbar from "../components/Navbar";
-
 const Home = () => {
   // few images or information
   
   return (
     <>
-      <Navbar />
       <h1>Homepage</h1>
+      <p>Cool shop where you can buy nice things</p>
     </>
   )
 }

@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
 
-const getProductData = ( id ) => {
+const getProductData = ( id='' ) => {
   const [error, setError] = useState();
   const [loading, setLoading] = useState(true);
-
-  const [title, setTitle] = useState();
-  const [price, setPrice] = useState();
-  const [description, setDescription] = useState();
-  const [image, setImage] = useState();
-  const [rate, setRate] = useState();
-  const [count, setCount] = useState();
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`, { mode: "cors" })
@@ -20,18 +14,12 @@ const getProductData = ( id ) => {
       return response.json()
     })
     .then((response) => {
-      setTitle(response.title);
-      setPrice(response.price);
-      setDescription(response.description);
-      setImage(response.image);
-      setRate(response.rating.rate);
-      setCount(response.rating.count);
+      setData(response);
     })
     .catch((error) => setError(error))
     .finally(() => setLoading(false));
   }, []);
-
-  return { title, price, description, image, rate, count };
+  return data;
 }
 
 export default getProductData;

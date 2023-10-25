@@ -21,7 +21,7 @@ const Product = ({items, setItems}) => {
       <p>{price} €</p>
       <div>
         <label htmlFor="quantity" >Quantity:</label>
-        <input type="number" defaultValue={1} min={qty} max={99} required onChange={(e) => {
+        <input type="number" defaultValue={1} min={1} max={99} required onChange={(e) => {
           setQty(e.target.value/1);
         }}/>
         <button onClick={() => {

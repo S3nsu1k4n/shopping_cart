@@ -1,7 +1,6 @@
 const Cart = ({items}) => {
   // show number of items
   //checkout and pay
-  console.log(items)
 
   return (
     <>

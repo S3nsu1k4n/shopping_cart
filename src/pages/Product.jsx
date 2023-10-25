@@ -5,9 +5,8 @@ import { useState } from "react";
 
 const Product = ({items, setItems}) => {
   const { id } = useParams();
-  const [qty, setQty] = useState(1); 
-  console.log(items);
-  const { prodcut_id, title, price, description, image, rating } = getProductData(id);
+  const [qty, setQty] = useState(1);
+  const {title, price, description, image, rating } = getProductData(id);
 
   if (!rating){
     return <p>Loading</p>
@@ -25,8 +24,6 @@ const Product = ({items, setItems}) => {
           setQty(e.target.value/1);
         }}/>
         <button onClick={() => {
-          console.log(qty)
-          console.log(title)
           let newItems = {...items};
           if (title in newItems){
             newItems[title].qty += qty;

@@ -1,0 +1,10 @@
+.checkout {
+  border: solid 2px;
+  border-radius: 12px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.checkout button {
+  background-color: orange;
+}

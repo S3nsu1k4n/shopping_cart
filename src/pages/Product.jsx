@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import getProductData from "../hook/getProductData";
 import { useState } from "react";
+import "./Product.css"
 
 
 const Product = ({items, setItems}) => {
@@ -12,13 +13,14 @@ const Product = ({items, setItems}) => {
     return <p>Loading</p>
   }
   return (
-    <div>
+    <div className="product">
       <h1>{title}</h1>
       <img src={image} alt={title} width={128}/>
       <p>{rating.rate} ({rating.count})</p>
       <p>{description}</p>
-      <p>{price} €</p>
-      <div>
+      <div className="product_table">
+        <p>Price:</p>
+        <p>{price} €</p>
         <label htmlFor="quantity" >Quantity:</label>
         <input type="number" defaultValue={1} min={1} max={99} required onChange={(e) => {
           setQty(e.target.value/1);
@@ -29,7 +31,7 @@ const Product = ({items, setItems}) => {
             newItems[title].qty += qty;
           }
           else{
-            newItems[title] = {price: price, qty: qty};
+            newItems[title] = {image: image, price: price, qty: qty};
           }
           setItems(newItems);
         }}>Add to Cart</button>

@@ -1,0 +1,25 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  justify-items: center;
+  border-radius: 12px;
+  border: solid 2px;
+  border-color: aliceblue;
+  background-color: lightblue;
+  color: white;
+}
+
+.dropdown :hover {
+  border: solid 2px;
+  margin: -2px;
+  border-color: blue;
+  border-radius: 12px;
+  color: blue;
+  cursor: pointer;
+}
+
+.dropdown p {
+  font-size: large;
+  margin: 0px;
+}

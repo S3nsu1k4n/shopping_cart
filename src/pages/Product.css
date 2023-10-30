@@ -1,0 +1,20 @@
+.product {
+  border: solid 2px;
+  border-radius: 12px;
+  border-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding-bottom: 10px;
+}
+
+.product_table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.product_table button {
+  grid-column: span 2;
+}

@@ -67,8 +67,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-.card-container{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}

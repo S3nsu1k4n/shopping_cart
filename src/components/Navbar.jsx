@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./navbar.css"
 
 const countItems = (items, sum=0) => {
   if(!items) return sum;

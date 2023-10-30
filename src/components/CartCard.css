@@ -1,0 +1,30 @@
+.cart_card {
+  border: solid 2px;
+  border-radius: 12px;
+  border-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  padding-bottom: 10px;
+}
+
+.cart_card:hover {
+  background-color: whitesmoke;
+}
+
+.cart_card_table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cart_card_table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.cart_card_table input {
+  max-width: 100px;
+  max-height: 20px;
+}

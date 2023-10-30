@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./card.css"
 
 const Card = ({ title, id, image, rate, count }) => {
   // for each of the products
@@ -6,13 +7,13 @@ const Card = ({ title, id, image, rate, count }) => {
   // product title
   // add to card button
   return (
-    <div className="card">
-      <p>{title}</p>
-      <Link to={`/product/${id}`} >
-        <img src={image} alt={title} width={128}/>
+      <Link to={`/product/${id}`} className="card">
+        <div>
+          <p>{title}</p>
+          <img src={image} alt={title} width={128}/>
+          <p>{rate} ({count})</p>
+        </div>
       </Link>
-      <p>{rate} ({count})</p>
-    </div>
   )
 }
 

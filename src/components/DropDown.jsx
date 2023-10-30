@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./DropDown.css"
 
 const DropDown = ({shownItem, setShownItem, options}) => {
   const [show, setShow] = useState(false);

@@ -1,0 +1,15 @@
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  align-items: center;
+}
+
+nav a {
+  min-width: 100px;
+  background-color: lightblue;
+  color: white;
+  border: solid 2px;
+  border-radius: 12px;
+  padding: 10px;
+}

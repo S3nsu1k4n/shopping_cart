@@ -16,7 +16,7 @@ const RouterComponent = ({items, setItems}) => {
       <Routes>
         <Route path="/" element={<Home />} errorElement={<ErrorPage/>} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/cart" element={<Cart items={items} />} />
+        <Route path="/cart" element={<Cart items={items} setItems={setItems} />} />
         <Route path="/product/:id" element={<Product items={items} setItems={setItems} />} />
       </Routes>
       </BrowserRouter>
